@@ -27,6 +27,6 @@ We plan to use the random forests and decision trees method.  We can use bootstr
 
 How will you evaluate your results? Qualitatively, what kind of results do you expect (e.g. plots or figures)? Quantitatively, what kind of analysis will you use to evaluate and/or compare your results (e.g. what performance metrics or statistical tests)?
 
-We can use a bar graph to show how many of the tweets were classified correctly and how many were incorrecly classified. We can also use a scatter plot with the x and y axises being features to show where we split our dataset. We plan to use the sample submission data in the Kaggle competition to calculate the error for each of the weak learners.  We can compare our weak leaners using the mean and standard deviation of their errors to compare their accuracy.
+We can use a bar graph to show how many of the tweets were classified correctly and how many were incorrecly classified. We can also use a scatter plot with the x and y axises being features to show where we split our dataset. We plan to use the sample submission data in the Kaggle competition to calculate the error for each of the weak learners.  We can compare our weak leaners using the mean and standard deviation of their errors to compare their accuracy.  We can also calculate the entropy and information gain of our splits.
 
 
