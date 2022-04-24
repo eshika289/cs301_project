@@ -38,13 +38,6 @@ The random forest contains decision trees that were made using different sets of
 ## Experiments (30%)
 Discuss the experiments that you performed to demonstrate that your approach solves the problem. The exact experiments will vary depending on the project, but you might compare with previously published methods, perform an ablation study to determine the impact of various components of your system, experiment with different hyperparameters or architectural choices, use visualization techniques to gain insight into how your model works, discuss common failure modes of your model, etc. You should include graphs, tables, or other figures to illustrate your experimental results.
 
-- split data into test and training sets
-- compare the number of correct predictions vs incorrect predictions to get the accuracy of the tree for the test and training data sets
-- kaggle test data set submission provides an accuracy
-- entropy
-- optimal feature selection
-- number of leaves in tree analysis
-
 ## Conclusion (5%)
 Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
 
