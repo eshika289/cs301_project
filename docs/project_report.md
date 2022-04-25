@@ -42,7 +42,13 @@ The random forest contains decision trees that were made using different sets of
 ## Experiments (30%)
 Discuss the experiments that you performed to demonstrate that your approach solves the problem. The exact experiments will vary depending on the project, but you might compare with previously published methods, perform an ablation study to determine the impact of various components of your system, experiment with different hyperparameters or architectural choices, use visualization techniques to gain insight into how your model works, discuss common failure modes of your model, etc. You should include graphs, tables, or other figures to illustrate your experimental results.
 
+We split the train dataset given to us by Kaggle into test and train subsets.  This allowed us to get the accuracy, precision, and recall of our decision trees and random forest for the train set and the test set.  The test set metrics are particularly important as it is a set of data that our model has never seen before.  Thus, the accuracy, precision, and recall for the test data set are great metrics to evaluate the performance of our model. 
 
+Another way, we evaluated the performance of our decision trees and random forest is by using the test data provided by Kaggle.  We are not giving the classification values for the Kaggle test data set.  Once our model makes a prediction for the Kaggle test data set, we can submit that information to the competition and receive an accuracy or score for our prediction.  This is another good performance metric as our models were not trained using this data set. 
+
+Each individual decision tree has an accuracy of around 60-70% depending on its feature set and training data.  The random forest combination of decision trees has an accuracy of about 75%.  The sklearn RandomForestClassifier has an accuracy of around 77%. 
+
+One experiment we conducted was to determine the number of leaves in each decision tree and the average number of tweets per leaf node. This experiment helped us better understand if the decision tree was overfitting the data set. For instance, a tree built using nine features had about 1-2 tweets per leaf node. This tree was overfitting the training data and had a training accuracy above 99% but a test accuracy of around 63%. However, when we limited the number of features per tree to less than 4 features, the decision trees had a higher number of tweets per leaf node. The train and test accuracies of these trees were more similar to each other. Visit tweets_per_leaf.png in the docs folder to see a graph representation of the information discussed.
 
 ## Conclusion (5%)
 Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
