@@ -17,6 +17,7 @@ The problem is how social media has become an important communication channel in
 ## Related Work (10%)
 Discuss published work that relates to your project. How is your approach similar or different from others?
 
+The approach we used was similar at some point due to the fact that alot of people used splitting test and validation. Also using stopwords, numbers and repeating characters. Others used Matplotlib as data visualization or creating a sequence-aware LSTM model with text embedding. Some even used Logistic Regression and basic text processing to predict real disaster from given tweets.
 
 ## Data (10%)
 Describe the data you are working with for your project. What type of data is it? Where did it come from? How much data are you working with? Did you have to do any preprocessing, filtering, or other special treatment to use this data in your project?
@@ -40,6 +41,8 @@ The random forest contains decision trees that were made using different sets of
 
 ## Experiments (30%)
 Discuss the experiments that you performed to demonstrate that your approach solves the problem. The exact experiments will vary depending on the project, but you might compare with previously published methods, perform an ablation study to determine the impact of various components of your system, experiment with different hyperparameters or architectural choices, use visualization techniques to gain insight into how your model works, discuss common failure modes of your model, etc. You should include graphs, tables, or other figures to illustrate your experimental results.
+
+
 
 ## Conclusion (5%)
 Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
