@@ -18,7 +18,6 @@ The problem is how social media has become an important communication channel in
 Discuss published work that relates to your project. How is your approach similar or different from others?
 
 
-
 ## Data (10%)
 Describe the data you are working with for your project. What type of data is it? Where did it come from? How much data are you working with? Did you have to do any preprocessing, filtering, or other special treatment to use this data in your project?
 
@@ -45,13 +44,14 @@ Discuss the experiments that you performed to demonstrate that your approach sol
 ## Conclusion (5%)
 Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
 
-- single decision tree accuracy 
-- random forest accuracy
+- single decision tree accuracy, that decision tree are flexible models that don't increase their number of parameters as we add more features and it can be output by a categorical prediction or a numerical prediction. Main advantage are they're easy to interpret, used for classification and regression, however the disadvantages are they're prone to over fitting to the training data.
+
+- random forest accuracy, Random forest classification consists of many decision trees, that uses bagging and feature randomness to each tree to create forest of trees whose prediction is more accurate than a single tree. Basically the trees protect each other from their own individual errors.
 
 ideas for future extensions
-- can use gradient boosting
-- attempt to use a neural network instead of decision trees
-- ensemble methods
+- can use gradient boosting to minimize bias error of the model. Can be used to predict as a classifier with the log loss function and as a regressor with the Mean Square Error.
+- attempt to use a neural network instead of decision trees, Neural Network has the ability to learn and model non-linear and complex relationships. It can generalize and predict on unseen data.
+- ensemble methods, create multiple models and then combine them to produce improved results. Produces more accurate solutions than a single model would.
 
 ## Grading Info
 Is your paper clearly written and nicely formatted? Writing / Formatting (5%)
