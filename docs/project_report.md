@@ -1,8 +1,9 @@
 # Project Report
-The following is a suggested structure for your report, as well as the rubric that we will follow when evaluating reports.
 
 ## Title, Author(s)
 Title: Natural Language Processing with Disaster Tweets : Decision Tree and Random Forest Approach
+
+Authors: Eshika Malgari, Raj Patel
 
 ## Abstract
 Briefly describe your problem, approach, and key results. Should be no more than 300 words.
@@ -22,13 +23,9 @@ The approach we used was similar at some point due to the fact that alot of peop
 ## Data (10%)
 Describe the data you are working with for your project. What type of data is it? Where did it come from? How much data are you working with? Did you have to do any preprocessing, filtering, or other special treatment to use this data in your project?
 
-test and train data sets on Kaggle
+We were provided with a test and train data set by Kaggle. The train dataset has 7,613 tweets and the test data set has 3,263 tweets. The columns/features of the train and test data sets include keyword, location, and text of each tweet. The train data set also includes a target column indicating the class to which the tweet belongs: valid or not valid. 
 
-Kaggle train data -> keyword, location, text, target
-- preprocess data to add more feature columns for the decision tree
-- 
-
-Kaggle test data -> keyword, location, text
+Before we could build our trees and forest using the data, we needed to preprocess it to add more feature columns to split the data set on.  For the sklearn random forest, we extracted features by using the TfidfVectorizer() function which transforms the text of each tweet into a usable vector to extract features from. For the hard-coded trees, we extracted additional features from the test including word count, character count, average characters per word, common words, bigrams, does it include a link, and the number of hashtags present. 
 
 ## Methods (30%)
 Discuss your approach for solving the problems that you set up in the introduction. Why is your approach the right thing to do? Did you consider alternative approaches? You should demonstrate that you have applied ideas and skills built up during the quarter to tackling your problem of choice. It may be helpful to include figures, diagrams, or tables to describe your method or compare it with other methods.
@@ -50,27 +47,15 @@ Each individual decision tree has an accuracy of around 60-70% depending on its 
 
 One experiment we conducted was to determine the number of leaves in each decision tree and the average number of tweets per leaf node. This experiment helped us better understand if the decision tree was overfitting the data set. For instance, a tree built using nine features had about 1-2 tweets per leaf node. This tree was overfitting the training data and had a training accuracy above 99% but a test accuracy of around 63%. However, when we limited the number of features per tree to less than 4 features, the decision trees had a higher number of tweets per leaf node. The train and test accuracies of these trees were more similar to each other. Visit tweets_per_leaf.png in the docs folder to see a graph representation of the information discussed.
 
+Another experiment we performed was analyzing the test data accuracy of decision trees made with various combinations of 1-3 features to determine the most optimal set of features to build decision trees on. We chose feature combinations that maximize the test data accuracy. 
+
 ## Conclusion (5%)
 Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
 
-- single decision tree accuracy, that decision tree are flexible models that don't increase their number of parameters as we add more features and it can be output by a categorical prediction or a numerical prediction. Main advantage are they're easy to interpret, used for classification and regression, however the disadvantages are they're prone to over fitting to the training data.
+We learned that decision trees are flexible models that don't increase their number of parameters as we add more features and it can be output by a categorical prediction or a numerical prediction. Their main advantage is that they are they're easy to interpret, used for classification and regression. However the disadvantages are they're prone to over fitting to the training data.
 
-- random forest accuracy, Random forest classification consists of many decision trees, that uses bagging and feature randomness to each tree to create forest of trees whose prediction is more accurate than a single tree. Basically the trees protect each other from their own individual errors.
+We learned that decision trees are flexible models used for classification problems.  They can support features that are categorical or a numerical.  We can also use regression trees for problems that are not classification based. Their main advantage is that they are they're easy to interpret and can be used for classification and regression. However the disadvantages are they're prone to over fitting to the training data.
 
-ideas for future extensions
-- can use gradient boosting to minimize bias error of the model. Can be used to predict as a classifier with the log loss function and as a regressor with the Mean Square Error.
-- attempt to use a neural network instead of decision trees, Neural Network has the ability to learn and model non-linear and complex relationships. It can generalize and predict on unseen data.
-- ensemble methods, create multiple models and then combine them to produce improved results. Produces more accurate solutions than a single model would.
+Random forest classification consists of many decision trees, that uses bagging and feature randomness to each tree to create forest of trees whose prediction is more accurate than a single tree. Basically the trees protect each other from their own individual errors.
 
-## Grading Info
-Is your paper clearly written and nicely formatted? Writing / Formatting (5%)
-
-Supplementary Material, not counted toward your 6-8 page limit and submitted as a separate file.
-
-Your supplementary material might include:
-- Cool videos, interactive visualizations, demos, etc.
-
-Examples of things to not put in your supplementary material:
-- The entire PyTorch/TensorFlow Github source code.
-- Any code that is larger than 10 MB.
-- Model checkpoints.
+Some ideas for future extensions include using gradient boosting to minimize bias error of the model. It can be used to predict as a classifier with the log loss function and as a regressor with the Mean Square Error.  We could aslo attempt to use a neural network instead of decision trees. Neural networks have the ability to learn and model non-linear and complex relationships. It can generalize and predict on unseen data.  Finally the use of ensemble methods could allow us create multiple models and then combine them to produce improved results. It would produces more accurate solutions than a single model would.
