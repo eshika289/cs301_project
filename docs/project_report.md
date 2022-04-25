@@ -52,8 +52,6 @@ Another experiment we performed was analyzing the test data accuracy of decision
 ## Conclusion (5%)
 Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
 
-We learned that decision trees are flexible models that don't increase their number of parameters as we add more features and it can be output by a categorical prediction or a numerical prediction. Their main advantage is that they are they're easy to interpret, used for classification and regression. However the disadvantages are they're prone to over fitting to the training data.
-
 We learned that decision trees are flexible models used for classification problems.  They can support features that are categorical or a numerical.  We can also use regression trees for problems that are not classification based. Their main advantage is that they are they're easy to interpret and can be used for classification and regression. However the disadvantages are they're prone to over fitting to the training data.
 
 Random forest classification consists of many decision trees, that uses bagging and feature randomness to each tree to create forest of trees whose prediction is more accurate than a single tree. Basically the trees protect each other from their own individual errors.
