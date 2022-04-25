@@ -12,8 +12,12 @@ The problem we are working with is a natural language processing (NLP) classific
 ## Introduction (10%)
 Describe the problem you are working on, why it’s important, and an overview of your results
 
+The problem is how social media has become an important communication channel in times of disater in the world. However, with that it's also poses people posting fake news or using misleading words. So in our case our problem is using Natural Language Processing (NLP) involving disaster tweets to predict whether the tweets are about real disasters or not. This is important because on social media it's never clear if a person's words are actually mentioning a disaster so using NLP to predict a disaster would be beneficial. The results are we got an accurarcy of 75% with the dataset specific in our model. 
+
 ## Related Work (10%)
 Discuss published work that relates to your project. How is your approach similar or different from others?
+
+
 
 ## Data (10%)
 Describe the data you are working with for your project. What type of data is it? Where did it come from? How much data are you working with? Did you have to do any preprocessing, filtering, or other special treatment to use this data in your project?
